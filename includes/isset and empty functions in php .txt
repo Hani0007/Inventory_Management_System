@@ -1,0 +1,74 @@
+
+String Methods.......
+1. strlen()  
+2. str_replace()  
+3. trim()  
+4. implode()  
+5. substr()  
+6. strpos() / stripos()  
+7. strtolower() / strtoupper()  
+8. ucfirst() / ucwords()  
+9. htmlspecialchars()  
+10. strip_tags()  
+11. html_entity_decode()  
+12. str_contains()  
+13. substr_count()  
+14. str_pad()  
+15. str_starts_with() / str_ends_with()
+
+$name = 'hanan';
+$string = strlen($name); //calculated the lenght of the String and Whitespaces as we
+2. str_replace
+$name = 'Abdul Hanan';
+syntax;
+$search = the thing Which You wanna search in the string...
+$replace = The thing Which You wanna replace in the string....
+$text = the Original Text..... in which make changes....
+$count = optional parameter Which tells No of replacemants in the string....
+str_replace($search,$replace,$text,$count(optional parameter));
+
+
+3.trim string methods
+// $name = "!!!!!!!!!!hanan@@@@@@@";
+// echo trim($name,'!,@');
+
+
+
+4./implode String Method 
+//===============================//
+//syntax--------
+// string implode(separator,array)
+//================================//
+
+//seperator Belongs to The specific type Which you wanna join Your String.... and Array belongs to the parameter Which You Wanna Join
+
+//example........With seperator Used......
+// $arr = ["I Love PHP","Love Mangoes",1,"Love Grapes"];
+// echo implode(",",$arr);
+// //example......With No seperator Used...........
+// $arr2 = ['I','Love','Mangoes'];
+// echo implode('.....',$arr2);
+
+5. //substr String Method............
+// substr(string_name, start_position, string_length_to_cut)
+$str = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero nemo hic accusamus inventore, est ex impedit deleniti cumque facere aliquid sed esse adipisci';
+echo substr($str,0,10);
+
+6.//strpos string  method 
+
+    //syntax: Original string, SearchStr, and start_position....
+
+    function search($string, $search)
+    {
+        $position = strpos($string, $search);
+
+        if (is_numeric($position)) {
+            return "Found At Position &nbsp;" . $position;
+        } else {
+            return "Not Found";
+        }
+    }
+
+    $string = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolore commodi possimus dolorem molestias, aspernatur itaque autem, voluptate non quod facilis excepturi eligendi dolor, delectus rem porro eius et sapiente';
+    $search = "Lorem";
+    echo search($string, $search);
